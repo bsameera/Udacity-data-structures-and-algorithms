@@ -1,0 +1,47 @@
+
+
+LRU_cache_1.py :
+
+Time Complexity -- All operations have a constant time in terms of time complexity.
+The add and delete methods have O(1), as adding to head and deleting from tail takes constant time since the head and tail nodes are updated with every operation.
+The get and set methods are also O(1), as the input key has to be retrieved from the dictionary which is constant time.
+Though searching through a doubly linkedlist is O(n), as the nodes are stored in a dictionary as values, the time complexity becomes constant time.
+The use of a dictionary to store the keys and nodes as values, definitely changed the time complexity of the algorithm to constant time rather than linear time.
+
+Space Complexity — The doubly linkedlist uses more space then single linkedlist. I could have accomplished the deletion and addition of nodes with singly linked list also, but in this case doubly linked list usage is more efficient. Also, dictionary takes up more space than a list. But, to make the retrieval time constant, it is better to use a dictionary than an array in this case. The space complexity of this algorithm is O(v * n), where v is the space used by all the variables in the algorithm and n is the capacity of the cache. Since constants(v) can be ignored, the space complexity of the LRU Cache algorithm is O(n).
+ 
+
+file_recursion_2.py :
+
+The time complexity for this algorithm is the depth of recursion. In this case,(the worst case) depth of recursion is 4. since it has a for loop, the time complexity would be n*d, where n is the number of directories and d is the depth of recursion. Also, we need to consider the depth of recursion used to flatten the output list of paths. If the depth is D and the number of paths returned is p, the time complexity would be p*D. Overall, the time complexity is — (n*d)+(p*D).
+I couldn’t have avoided recursion, as we have to check the sub-directories also for the file with the given suffix.
+
+Space Complexity — The space complexity for this algorithm is O(v*n), where n is the maximum depth of recursion or the number of return statements and O(v) is the space used by all the variables in each recursive call in the algorithm. Also, we need to consider the space complexity to flatten the output list of file paths. If the depth of recursive call is d and the space taken by the algorithm in each iteration is O(s), the space complexity to flatten the list is O(d*s). Overall, space complexity is O(v*n)+O(d*s).
+
+huffman_coding_3.py :
+
+The time complexity for the huffman algorithm is O(nlogn). For encoding, the time complexity is O(nlogn) as the sort method is used in the algorithm. It is linear for decoding and the time complexity is the length of the encoded data(input). The lists were helpful to sort the data and access them by their indices. The use of tuples made the storage and access of character and frequency pairs easy. Since I used dictionaries to store the frequencies and the nodes, the time complexity was constant time to retrieve these values.
+
+Space Complexity — The use of dictionaries makes the space complexity more but, it reduces the time complexity and makes it constant time to retrieve or change. It makes sense to use dictionaries in this algorithm. Otherwise, the memory complexity is O(n*m), where n is the space used by all the variables in the algorithm and m is the length of frequency list or the number of unique characters in the input data. But, since the number of variables used is generally constant, the space complexity depends on m, which is the number of unique characters of the input data.
+
+active_directory_4.py :
+
+The algorithm for active directory uses recursion. I could not have avoided using recursion, as I have to check the sub-directories for the given user. The time complexity is the depth of the sub-directories which is still linear time.
+
+Space Complexity — The space complexity for this algorithm is calculated by the sum of three situations. The first is the O(g*d), where g is the number of groups and d is the depth of recursion. The second case is O(n), where n is the length of users list. The third case is when the users list is flattened, and the worst case can be O(n*l), where n is the length of users list and l is the maximum number of recursive operations in each iteration. Overall, space complexity is O(g*d)+O(n)+O(n*l).
+
+blockchain_5.py :
+
+The algorithm to create a blockchain takes constant time,O(1) for the addition of a new block, as the tail is updated when a new block is added. To access the blockchain, it will take linear time as each block is connected to the hash of the previous block. 
+
+Space Complexity — The space complexity is the space taken by all the variables used in the algorithm. In this case, it is the size of blockchain. The actual space complexity is O(n)+O(s), where n is the number of variables and their memory usage and s is the size of the blockchain, since constants can be ignored, the space complexity depends on the size of the blockchain, which is O(s).
+
+union_and_intersection_6.py : 
+
+The average time complexity for the union method is O(len(linkedlist1)+len(linkedlist2)) and the worst case is O(len(linkedlist1)*len(linkedlist2)). It is implemented when the union keyword is used on the two sets at line number 115.
+The worst time complexity for the intersection method is O(len(linkedlist1)*len(linkedlist2)). It is implemented when the intersection keyword is used on the two sets at line number 142.
+I changed the data structures from dictionary to sets, as dictionaries take a lot of space when compared to lists or sets. Also, the time complexity with dictionaries was almost the same as the time complexity when sets are used i.e.
+O(len(linkedlist1)*len(linkedlist2)) for intersection and O(len(linkedlist1)+len(linkedlist2)) for union method. It would make sense to use sets instead of dictionaries.
+
+Space Complexity — The space complexity is the memory used by all the variables. For union, the space complexity for worst case is length both the linked lists which is O(n+m) where n and m are the lengths of linked lists.
+For intersection, the worst case is when one linked list is a subset of the other. In this case, the space complexity would be the length of smaller linked list, which is O(n).

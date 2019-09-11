@@ -1,0 +1,44 @@
+Task - 0 : 
+
+•	To read the files text.csv and calls.csv, the time complexity is -- O(n).
+•	As accessing the elements of an array is always constant or same time irrespective of the input size. So, to access the first element from the text list      and the last element from the calls list – O(1).
+•	O(n) + O(1) = O(n) 
+•	As constant time can be ignored, the time complexity is O(n).
+
+Task - 1 : 
+
+•	To read the files text.csv and calls.csv, the time complexity is -- O(n).
+•	To access the texts list and calls list to store the phone numbers in the set, phone_numbers_set, the time complexity is O(n).
+•	O(n) + O(n) = O(2n)
+•	But, we have to ignore the small numbers, so the time complexity is O(n).
+
+Task - 2 :
+
+•	To read the files text.csv and calls.csv, the time complexity is -- O(n).
+•	To access the calls list, the time complexity O(n/2).
+•	To access the calls_dict dictionary to findout the max_time, the time complexity O(n/2) in the worst case.
+•	O(n) + O(n/2) + O(n/2) = O(2n)
+•	Since constant values are ignored, it is same as O(n).
+
+Task - 3 : 
+
+•	To read the files text.csv and calls.csv, the time complexity is -- O(n).
+•	To access the calls list, it is O(n/2).
+•	To convert the area_codes_list to a set, it is O(n/2).
+•	When sorted method is used on the set, it is O(n/2 log n/2).
+•	When the list is accessed to print the values, it is O(n/2).
+•	In part B, it is always one step and constant time to calculate the percent of calls from fixed lines in Bangalore to other fixed lines in Bangalore.
+•	O(n) + O(n/2) + O(n/2) + O(n/2) + O(n/2) + O(1) + O(n/2 log n/2) = O(3n) + O(1) + O(n/2 log n/2)
+•	Since constants are ignored, the time complexity is O(n log n) as O(n log n) is worse than O(n), so O(n) can be ignored.
+		
+
+Task - 4 :
+
+•	To read the files text.csv and calls.csv, the time complexity is -- O(n).
+•	To access the calls list and texts list, it is O(n).
+•	to find the telemarketers phone numbers, O(n/2) + O(n/2) = O(n), since it is two steps.
+•	To sort the telemarketers, it can be O(n log n).
+•	To print the values of sorted_telemarketers list, the list is accessed n times, so the time complexity is O(n) worst case or can be less than O(n).
+•	O(n) + O(n) + O(n) + O(n) + O(n) + O(n log n) = O(5n) + O(n log n)
+•	Since constants are ignored, the time complexity is O(n log n) as 
+    O(n log n) has a worse time complexity than O(n).
